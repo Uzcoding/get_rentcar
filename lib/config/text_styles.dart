@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_rentcar/config/config.dart';
 
-class TextStyles {
+abstract class TextStyles {
   static const TextStyle buttonText = const TextStyle(
     fontFamily: 'Montserrat',
     fontSize: 18.0,

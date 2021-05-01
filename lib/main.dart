@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         primaryColor: ColorPalette.mainColor,
         scaffoldBackgroundColor: ColorPalette.scaffoldBackground,
       ),
-      home: SignUpScreen(),
+      home: ConfirmationScreen(),
     );
   }
 }

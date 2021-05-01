@@ -83,7 +83,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           }
         },
         child: Text(
-          'Далее',
+          AppStrings.further,
           style: const TextStyle(
             fontFamily: 'Montserrat',
             fontWeight: FontWeight.bold,
