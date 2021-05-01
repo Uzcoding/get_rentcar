@@ -13,6 +13,8 @@ dependencies:
     sdk: flutter
 
 
+  intl_phone_field:
+    path: packages/intl_phone_input
   cupertino_icons: ^1.0.2
 
 dev_dependencies:

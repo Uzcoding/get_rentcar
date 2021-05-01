@@ -22,8 +22,9 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
         ),
         primaryColor: ColorPalette.mainColor,
+        scaffoldBackgroundColor: ColorPalette.scaffoldBackground,
       ),
-      home: AuthIntroScreen(),
+      home: SignUpScreen(),
     );
   }
 }
