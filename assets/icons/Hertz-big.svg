@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81.186" height="76.308" viewBox="0 0 81.186 76.308">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="81.186" height="76.308" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Hertz-big" clip-path="url(#clip-path)">
+    <g id="Hertz-big-2" data-name="Hertz-big" transform="translate(0 0)">
+      <g id="Group_1754" data-name="Group 1754">
+        <path id="Path_1563" data-name="Path 1563" d="M40.593,0C63.012,0,81.186,17.082,81.186,38.154S63.012,76.308,40.593,76.308,0,59.226,0,38.154,18.174,0,40.593,0Z" transform="translate(0 0)" fill="#ff7a65"/>
+        <path id="Path_1560" data-name="Path 1560" d="M77.567,105.99c-19.244,0-34.9-14.2-34.9-31.661s15.656-31.661,34.9-31.661,34.9,14.2,34.9,31.661S96.812,105.99,77.567,105.99Z" transform="translate(-37.559 -35.508)" fill="#ff7a65"/>
+      </g>
+      <path id="Path_1562" data-name="Path 1562" d="M151.613,136C142.99,136,136,143.974,136,153.809s6.99,17.809,15.613,17.809,15.613-7.973,15.613-17.809S160.236,136,151.613,136Zm5.984,27.1h-2.743v-7.58h-6.481v7.58H145.63V144.517h2.743v7.58h6.481v-7.58H157.6Z" transform="translate(-111.839 -114.989)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

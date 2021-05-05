@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_rentcar/config/config.dart';
+import 'package:get_rentcar/screens/screens.dart';
 import 'package:get_rentcar/widgets/widgets.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
@@ -10,6 +12,17 @@ class ConfirmationScreen extends StatefulWidget {
 
 class _ConfirmationScreenState extends State<ConfirmationScreen> {
   TextEditingController codeController = TextEditingController();
+
+  AppBar getAppBar() {
+    return AppBar(
+      leading: IconButton(
+        padding: EdgeInsets.zero,
+        splashRadius: 20.0,
+        icon: Image.asset(ImagePath.arrow_back),
+        onPressed: () {},
+      ),
+    );
+  }
 
   Container getCodeInput() {
     return Container(
@@ -28,16 +41,9 @@ class _ConfirmationScreenState extends State<ConfirmationScreen> {
           filled: true,
           fillColor: ColorPalette.inputFilled,
           hintText: '123 456 789',
-          hintStyle: TextStyle(
-            color: Color(0xFFD2D2D2),
-          ),
-          contentPadding:
-              const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20.0),
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: const BorderRadius.all(
-              const Radius.circular(10.0),
-            ),
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 12.0,
+            vertical: 20.0,
           ),
           counterText: '',
         ),
@@ -77,16 +83,7 @@ class _ConfirmationScreenState extends State<ConfirmationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: ColorPalette.scaffoldBackground,
-        elevation: 0,
-        leading: IconButton(
-          padding: EdgeInsets.zero,
-          splashRadius: 20.0,
-          icon: Image.asset(ImagePath.arrow_back),
-          onPressed: () {},
-        ),
-      ),
+      appBar: getAppBar(),
       body: Container(
         margin:
             const EdgeInsets.symmetric(horizontal: 20.0).copyWith(top: 50.0),
@@ -108,7 +105,12 @@ class _ConfirmationScreenState extends State<ConfirmationScreen> {
             FilledButton(
               title: AppStrings.next,
               size: double.infinity,
-              onPressed: () => print('hello'),
+              onPressed: () => Navigator.push(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => HomeScreen(),
+                ),
+              ),
             ),
             const SizedBox(height: 25.0),
             getSendCodeAgain()
