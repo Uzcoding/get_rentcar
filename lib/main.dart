@@ -54,6 +54,11 @@ class MyApp extends StatelessWidget {
               child: MyReservationsScreen(),
               transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
             );
+          case Routes.myTransactions:
+            return Transition(
+              child: MyTransactionsScreen(),
+              transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+            );
         }
       },
     );

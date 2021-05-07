@@ -17,4 +17,9 @@ abstract class TextStyles {
     fontWeight: FontWeight.bold,
     color: ColorPalette.drawerText,
   );
+  static const TextStyle transictionsContent = const TextStyle(
+    fontSize: 18.0,
+    fontWeight: FontWeight.bold,
+    color: ColorPalette.drawerText,
+  );
 }

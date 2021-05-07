@@ -23,7 +23,7 @@ class CustomDrawer extends StatelessWidget {
     3: {
       'icon': IconsPath.myTransactions,
       'name': AppStrings.myTransactions,
-      'route': '',
+      'route': Routes.myTransactions,
     },
     4: {
       'icon': IconsPath.settings,

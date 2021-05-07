@@ -49,4 +49,7 @@ abstract class AppStrings {
   // My Reservations
   static const String numberReservation = 'Номер бронирования';
   static const String addReservation = 'Добавить бронирование';
+
+  // My Transactions
+  static const String transactions = 'Транзакции';
 }
