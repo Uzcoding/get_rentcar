@@ -12,4 +12,9 @@ abstract class TextStyles {
     fontSize: 28.0,
     color: ColorPalette.black,
   );
+  static const TextStyle profileTitle = const TextStyle(
+    fontSize: 27.0,
+    fontWeight: FontWeight.bold,
+    color: ColorPalette.drawerText,
+  );
 }

@@ -25,7 +25,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         children: [
           IntlPhoneField(
             autofocus: true,
-            autoValidate: true,
+            autoValidate: false,
             decoration: InputDecoration(
               border: InputBorder.none,
               focusedBorder: InputBorder.none,
@@ -78,9 +78,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Center(
       child: TextButton(
         onPressed: () {
-          if (_formKey.currentState!.validate()) {
-            print('ok');
-          }
+          Navigator.pushNamed(context, Routes.confirmation);
         },
         child: Text(
           AppStrings.further,

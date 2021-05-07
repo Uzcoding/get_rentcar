@@ -19,7 +19,7 @@ class _ConfirmationScreenState extends State<ConfirmationScreen> {
         padding: EdgeInsets.zero,
         splashRadius: 20.0,
         icon: Image.asset(ImagePath.arrow_back),
-        onPressed: () {},
+        onPressed: () => Navigator.pop(context),
       ),
     );
   }
@@ -105,12 +105,8 @@ class _ConfirmationScreenState extends State<ConfirmationScreen> {
             FilledButton(
               title: AppStrings.next,
               size: double.infinity,
-              onPressed: () => Navigator.push(
-                context,
-                CupertinoPageRoute(
-                  builder: (context) => HomeScreen(),
-                ),
-              ),
+              onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                  context, Routes.home, (route) => false),
             ),
             const SizedBox(height: 25.0),
             getSendCodeAgain()

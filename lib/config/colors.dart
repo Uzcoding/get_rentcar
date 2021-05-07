@@ -11,4 +11,10 @@ abstract class ColorPalette {
   static const Color categoryTitle = Color(0xFF202020);
   static const Color seeAll = Color(0xFF326FE9);
   static const Color drawerText = Color(0xFF302E2E);
+  static const Color settingsGray = Color(0xFF6F6F6F);
+
+  // Switch
+  static const Color inactiveTrackColor = Color(0xFFBBBEC2);
+  static const Color activeTrackColor = Color(0xFFA1BAE0);
+  static const Color inactiveThumbColor = Color(0xFFE4E4E4);
 }

@@ -29,7 +29,7 @@ class AuthIntroScreen extends StatelessWidget {
     );
   }
 
-  SafeArea buildContent() {
+  SafeArea buildContent(BuildContext context) {
     return SafeArea(
       child: Center(
         child: Container(
@@ -49,7 +49,7 @@ class AuthIntroScreen extends StatelessWidget {
                       TextSpan(
                         text: AppStrings.appNameGet.toUpperCase(),
                         style: TextStyle(
-                          fontSize: 45.0,
+                          fontSize: 50.0,
                         ),
                       ),
                       TextSpan(
@@ -69,7 +69,10 @@ class AuthIntroScreen extends StatelessWidget {
                   width: double.infinity,
                   height: 50.0,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.pushNamed(
+                      context,
+                      Routes.signUp,
+                    ),
                     style: TextButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
@@ -99,7 +102,7 @@ class AuthIntroScreen extends StatelessWidget {
         children: [
           buildBackgroundImage(),
           buildImageFilter(),
-          buildContent(),
+          buildContent(context),
         ],
       ),
     );

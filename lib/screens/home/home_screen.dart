@@ -11,7 +11,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-
   int currentTabIndex = 1;
 
   final List<String> _barItems = [
@@ -34,16 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 10.0),
-          child: IconButton(
-            splashRadius: 20.0,
-            icon: SvgPicture.asset(IconsPath.drawer),
-            onPressed: () => _scaffoldKey.currentState?.openDrawer(),
-          ),
-        ),
-      ),
+      appBar: getAppBarWithDrawer(_scaffoldKey),
       body: _tabsScreens[currentTabIndex],
       bottomNavigationBar: SizedBox(
         height: 70.0,

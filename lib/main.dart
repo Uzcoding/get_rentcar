@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_rentcar/config/config.dart';
 import 'package:get_rentcar/screens/screens.dart';
+import 'package:transition/transition.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -17,31 +18,39 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        inputDecorationTheme: InputDecorationTheme(
-          filled: true,
-          fillColor: ColorPalette.inputFilled,
-          hintStyle: TextStyle(
-            color: ColorPalette.inputHint,
-            fontSize: 15.0,
-          ),
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: const BorderRadius.all(
-              const Radius.circular(10.0),
-            ),
-          ),
-        ),
-        fontFamily: 'Montserrat',
-        appBarTheme: AppBarTheme(
-          brightness: Brightness.light,
-          backgroundColor: ColorPalette.scaffoldBackground,
-          elevation: 0,
-        ),
-        primaryColor: ColorPalette.mainColor,
-        scaffoldBackgroundColor: ColorPalette.scaffoldBackground,
-      ),
-      home: ConfirmationScreen(),
+      theme: AppTheme.appTheme,
+      home: HomeScreen(),
+      initialRoute: Routes.home,
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case Routes.authIntro:
+            return Transition(
+              child: AuthIntroScreen(),
+              transitionEffect: TransitionEffect.SCALE,
+              curve: Curves.linear,
+            );
+          case Routes.signUp:
+            return Transition(
+              child: SignUpScreen(),
+              transitionEffect: TransitionEffect.LEFT_TO_RIGHT,
+            );
+          case Routes.confirmation:
+            return Transition(
+              child: ConfirmationScreen(),
+              transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+            );
+          case Routes.home:
+            return Transition(
+              child: HomeScreen(),
+              transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+            );
+          case Routes.profileSettings:
+            return Transition(
+              child: ProfileSettingsScreen(),
+              transitionEffect: TransitionEffect.LEFT_TO_RIGHT,
+            );
+        }
+      },
     );
   }
 }

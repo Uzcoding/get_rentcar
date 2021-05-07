@@ -35,4 +35,14 @@ abstract class AppStrings {
   static const String settings = 'Настройки';
   static const String logout = 'Выйти';
   static const String support = 'Тех.Поддержка';
+
+  // Profile Settings
+  static const String language = 'Язык';
+  static const String ru = 'Русский';
+  static const String uz = 'Узбекский';
+  static const String uzs = 'Сум';
+  static const String usd = 'Доллар';
+  static const String currency = 'Валюта';
+  static const String accessNotification = 'Разрешить уведомления';
+  static const String accessGeo = 'Включить местоположение';
 }

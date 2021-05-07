@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_rentcar/config/config.dart';
@@ -7,26 +8,32 @@ class CustomDrawer extends StatelessWidget {
     0: {
       'icon': IconsPath.profile,
       'name': AppStrings.profile,
+      'route': '/profile',
     },
     1: {
       'icon': IconsPath.bron,
       'name': AppStrings.bron,
+      'route': '/profile',
     },
     2: {
       'icon': IconsPath.myReservations,
       'name': AppStrings.myReservations,
+      'route': '/profile',
     },
     3: {
       'icon': IconsPath.myTransactions,
       'name': AppStrings.myTransactions,
+      'route': '/profile',
     },
     4: {
       'icon': IconsPath.settings,
       'name': AppStrings.settings,
+      'route': '/settings',
     },
     5: {
       'icon': IconsPath.logout,
       'name': AppStrings.logout,
+      'route': '/profile',
     },
   };
   @override
@@ -84,6 +91,10 @@ class CustomDrawer extends StatelessWidget {
                       children: List.generate(
                         drawerData.length,
                         (index) => ListTile(
+                          onTap: () {
+                            Navigator.popAndPushNamed(
+                                context, Routes.profileSettings);
+                          },
                           contentPadding: EdgeInsets.zero,
                           leading: SvgPicture.asset(
                             drawerData[index]!['icon']!,
