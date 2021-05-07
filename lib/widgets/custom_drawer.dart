@@ -3,12 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_rentcar/config/config.dart';
 
-class CustomDrawer extends StatelessWidget {
+int? selectedIndex = 0;
+
+class CustomDrawer extends StatefulWidget {
+  @override
+  _CustomDrawerState createState() => _CustomDrawerState();
+}
+
+class _CustomDrawerState extends State<CustomDrawer> {
   final Map<int, Map<String, dynamic>> drawerData = {
     0: {
       'icon': IconsPath.profile,
       'name': AppStrings.profile,
-      'route': '',
+      'route': Routes.profile,
     },
     1: {
       'icon': IconsPath.bron,
@@ -36,6 +43,7 @@ class CustomDrawer extends StatelessWidget {
       'route': '',
     },
   };
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -92,10 +100,15 @@ class CustomDrawer extends StatelessWidget {
                         drawerData.length,
                         (index) => ListTile(
                           onTap: () {
+                            // if (selectedIndex != index) {
+                            // selectedIndex = index;
                             drawerData[index]!['route']! != ''
                                 ? Navigator.popAndPushNamed(
                                     context, drawerData[index]!['route']!)
                                 : print('no route');
+                            // } else {
+                            //   Navigator.pop(context);
+                            // }
                           },
                           contentPadding: EdgeInsets.zero,
                           leading: SvgPicture.asset(

@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.appTheme,
       home: HomeScreen(),
-      initialRoute: Routes.home,
+      initialRoute: '/',
       onGenerateRoute: (settings) {
         switch (settings.name) {
           case Routes.authIntro:
@@ -57,6 +57,11 @@ class MyApp extends StatelessWidget {
           case Routes.myTransactions:
             return Transition(
               child: MyTransactionsScreen(),
+              transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+            );
+          case Routes.profile:
+            return Transition(
+              child: ProfileScreen(),
               transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
             );
         }

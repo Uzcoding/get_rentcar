@@ -6,4 +6,5 @@ abstract class Routes {
   static const String profileSettings = '/profile-settings';
   static const String myReservations = '/my-reservations';
   static const String myTransactions = '/my-transactions';
+  static const String profile = '/profile';
 }

@@ -52,4 +52,11 @@ abstract class AppStrings {
 
   // My Transactions
   static const String transactions = 'Транзакции';
+
+  // Profile
+  static const String name = 'Имя';
+  static const String surName = 'Фамилия';
+  static const String email = 'Эл.Почта';
+  static const String phone = 'Телефон';
+  static const String save = 'Сохранить';
 }
