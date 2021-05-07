@@ -8,32 +8,32 @@ class CustomDrawer extends StatelessWidget {
     0: {
       'icon': IconsPath.profile,
       'name': AppStrings.profile,
-      'route': '/profile',
+      'route': '',
     },
     1: {
       'icon': IconsPath.bron,
       'name': AppStrings.bron,
-      'route': '/profile',
+      'route': '',
     },
     2: {
       'icon': IconsPath.myReservations,
       'name': AppStrings.myReservations,
-      'route': '/profile',
+      'route': Routes.myReservations,
     },
     3: {
       'icon': IconsPath.myTransactions,
       'name': AppStrings.myTransactions,
-      'route': '/profile',
+      'route': '',
     },
     4: {
       'icon': IconsPath.settings,
       'name': AppStrings.settings,
-      'route': '/settings',
+      'route': Routes.profileSettings,
     },
     5: {
       'icon': IconsPath.logout,
       'name': AppStrings.logout,
-      'route': '/profile',
+      'route': '',
     },
   };
   @override
@@ -92,8 +92,10 @@ class CustomDrawer extends StatelessWidget {
                         drawerData.length,
                         (index) => ListTile(
                           onTap: () {
-                            Navigator.popAndPushNamed(
-                                context, Routes.profileSettings);
+                            drawerData[index]!['route']! != ''
+                                ? Navigator.popAndPushNamed(
+                                    context, drawerData[index]!['route']!)
+                                : print('no route');
                           },
                           contentPadding: EdgeInsets.zero,
                           leading: SvgPicture.asset(

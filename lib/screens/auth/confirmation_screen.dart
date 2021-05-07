@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_rentcar/config/config.dart';
-import 'package:get_rentcar/screens/screens.dart';
 import 'package:get_rentcar/widgets/widgets.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
