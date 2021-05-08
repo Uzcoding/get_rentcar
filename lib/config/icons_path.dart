@@ -5,6 +5,9 @@ abstract class IconsPath {
   static const String tabNote = 'assets/icons/tab-note.svg';
   static const String tabSearch = 'assets/icons/tab-search.svg';
   static const String hertz = 'assets/icons/Hertz.svg';
+  static const String hertzBig = 'assets/icons/Hertz-big.svg';
+  static const String star = 'assets/icons/star.svg';
+  static const String activeStar = 'assets/icons/active-star.svg';
 
   // Drawer icons
   static const String profile = 'assets/icons/profile.svg';

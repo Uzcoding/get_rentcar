@@ -7,3 +7,4 @@ export 'profile_settings/profile_settings_screen.dart';
 export 'my_reservations/my_reservations_screen.dart';
 export 'my_transactions/my_transactions_screen.dart';
 export 'profile/profile_screen.dart';
+export 'providers/providers_screen.dart';

@@ -64,6 +64,11 @@ class MyApp extends StatelessWidget {
               child: ProfileScreen(),
               transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
             );
+          case Routes.providers:
+            return Transition(
+              child: ProvidersScreen(),
+              transitionEffect: TransitionEffect.FADE,
+            );
         }
       },
     );

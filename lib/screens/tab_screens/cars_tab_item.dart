@@ -17,11 +17,7 @@ class CarsTabItem extends StatelessWidget {
               children: <Widget>[
                 Text(
                   AppStrings.cars,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 22.0,
-                    color: ColorPalette.categoryTitle,
-                  ),
+                  style: TextStyles.listTitle,
                 ),
                 GestureDetector(
                   onTap: () {},
@@ -44,14 +40,10 @@ class CarsTabItem extends StatelessWidget {
               children: <Widget>[
                 Text(
                   AppStrings.providers,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 22.0,
-                    color: ColorPalette.categoryTitle,
-                  ),
+                  style: TextStyles.listTitle,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () => Navigator.pushNamed(context, Routes.providers),
                   child: Text(
                     AppStrings.seeAll,
                     style: TextStyle(

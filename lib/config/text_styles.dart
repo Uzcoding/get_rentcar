@@ -22,4 +22,9 @@ abstract class TextStyles {
     fontWeight: FontWeight.bold,
     color: ColorPalette.drawerText,
   );
+  static const TextStyle listTitle = const TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 22.0,
+    color: ColorPalette.categoryTitle,
+  );
 }

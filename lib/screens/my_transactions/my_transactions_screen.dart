@@ -14,6 +14,7 @@ class MyTransactionsScreen extends StatelessWidget {
     return Scaffold(
       key: _scaffoldKey,
       appBar: getAppBarWithDrawer(_scaffoldKey),
+      drawer: CustomDrawer(),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: SizedBox(
@@ -68,7 +69,6 @@ class MyTransactionsScreen extends StatelessWidget {
           ),
         ),
       ),
-      drawer: CustomDrawer(),
     );
   }
 }
