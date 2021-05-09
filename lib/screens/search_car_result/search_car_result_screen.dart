@@ -7,25 +7,7 @@ class SearchCarResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: GestureDetector(
-          onTap: () {},
-          child: Padding(
-            padding: const EdgeInsets.only(left: 15.0),
-            child: Image.asset(
-              ImagePath.arrow_back,
-            ),
-          ),
-        ),
-        title: Text(
-          AppStrings.searchResult,
-          style: const TextStyle(
-            fontSize: 22.0,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
+      appBar: getAppBarWithBackAndTitle(context, AppStrings.searchResult),
       drawer: CustomDrawer(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

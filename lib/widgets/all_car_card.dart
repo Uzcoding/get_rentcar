@@ -13,14 +13,8 @@ class AllCarCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(15.0),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade200,
-            offset: Offset(0, 3),
-            blurRadius: 6.0,
-          )
-        ],
+        borderRadius: AppTheme.radius,
+        boxShadow: AppTheme.shadow,
         color: Colors.white,
       ),
       child: Row(

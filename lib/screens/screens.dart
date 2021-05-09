@@ -10,3 +10,5 @@ export 'profile/profile_screen.dart';
 export 'providers/providers_screen.dart';
 export 'cars/cars_screen.dart';
 export 'search_car_result/search_car_result_screen.dart';
+export 'car_detail/card_detail_screen.dart';
+export 'driver_details/driver_details_screen.dart';

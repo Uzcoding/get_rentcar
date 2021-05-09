@@ -6,7 +6,6 @@ class CarsTabItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(

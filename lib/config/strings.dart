@@ -1,6 +1,7 @@
 abstract class AppStrings {
   static const String appNameGet = 'get';
   static const String rentCar = 'rentcar';
+  static const String searchResult = 'Результаты поиска';
 
   // Auth
   static const String signIn = 'Войти';
@@ -45,7 +46,6 @@ abstract class AppStrings {
   static const String currency = 'Валюта';
   static const String accessNotification = 'Разрешить уведомления';
   static const String accessGeo = 'Включить местоположение';
-  static const String searchResult = 'Результаты поиска';
 
   // My Reservations
   static const String numberReservation = 'Номер бронирования';
@@ -60,4 +60,11 @@ abstract class AppStrings {
   static const String email = 'Эл.Почта';
   static const String phone = 'Телефон';
   static const String save = 'Сохранить';
+
+  // Car
+  static const String addons = 'Дополнения';
+  static const String included = 'Включено';
+  static const String makingChanges = 'Внесения изменений';
+  static const String coverageInCaseOfTheft = 'Покрытие на случай угона';
+  static const String accidentCoverage = 'Покрытие на случай ДТП';
 }

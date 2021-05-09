@@ -32,4 +32,8 @@ abstract class TextStyles {
     fontWeight: FontWeight.bold,
     color: ColorPalette.drawerText,
   );
+  static const TextStyle countryAndCity = const TextStyle(
+    fontSize: 12.0,
+    color: ColorPalette.countryAndCity,
+  );
 }

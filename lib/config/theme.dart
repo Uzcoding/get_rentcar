@@ -26,4 +26,13 @@ abstract class AppTheme {
     primaryColor: ColorPalette.mainColor,
     scaffoldBackgroundColor: ColorPalette.scaffoldBackground,
   );
+
+  static final BorderRadiusGeometry radius = BorderRadius.circular(20.0);
+  static final List<BoxShadow> shadow = [
+    BoxShadow(
+      color: Colors.grey.shade200,
+      offset: Offset(0, 3),
+      blurRadius: 6.0,
+    ),
+  ];
 }

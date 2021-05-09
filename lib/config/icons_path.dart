@@ -21,4 +21,8 @@ abstract class IconsPath {
   static const String armchair = 'assets/icons/armchair.svg';
   static const String door = 'assets/icons/door.svg';
   static const String conditsioner = 'assets/icons/conditsioner.svg';
+  static const String bigDoor = 'assets/icons/big-door.svg';
+  static const String bags = 'assets/icons/bags.svg';
+  static const String stroller = 'assets/icons/stroller.svg';
+  static const String checkMark = 'assets/icons/check-mark.svg';
 }

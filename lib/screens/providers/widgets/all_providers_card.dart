@@ -15,14 +15,8 @@ class AllProvidersCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20.0),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade200,
-            offset: Offset(0, 3),
-            blurRadius: 6.0,
-          )
-        ],
+        borderRadius: AppTheme.radius,
+        boxShadow: AppTheme.shadow,
         color: Colors.white,
       ),
       child: Row(
@@ -38,10 +32,7 @@ class AllProvidersCard extends StatelessWidget {
               ),
               Text(
                 'Узбекистан - Ташкент',
-                style: const TextStyle(
-                  fontSize: 12.0,
-                  color: const Color(0xFF919191),
-                ),
+                style: TextStyles.countryAndCity,
               ),
               const SizedBox(height: 5.0),
               generateStars(rate),

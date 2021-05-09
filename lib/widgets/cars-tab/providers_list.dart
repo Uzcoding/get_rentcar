@@ -33,14 +33,8 @@ class HomeProviderCard extends StatelessWidget {
           : EdgeInsets.symmetric(horizontal: 13.0),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade300,
-            offset: Offset(2, 2),
-            blurRadius: 5.0,
-          ),
-        ],
+        borderRadius: AppTheme.radius,
+        boxShadow: AppTheme.shadow,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

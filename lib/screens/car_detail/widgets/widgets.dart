@@ -1,0 +1,10 @@
+export 'circle_bar.dart';
+export 'included.dart';
+export 'car_characterictic.dart';
+export 'car_provider.dart';
+export 'car_info_details.dart';
+export 'car_info_details_card.dart';
+export 'car_addons.dart';
+export 'car_addons_card.dart';
+export 'car_includes.dart';
+export 'car_bottom_button.dart';

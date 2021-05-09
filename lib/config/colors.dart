@@ -15,6 +15,7 @@ abstract class ColorPalette {
   static const Color tranactionsCarBg = Color(0xFFF5F7FC);
   static const Color red = Color(0xFFE9454A);
   static const Color profileText = Color(0xFF1A1824);
+  static const Color countryAndCity = Color(0xFF919191);
 
   // Switch
   static const Color inactiveTrackColor = Color(0xFFBBBEC2);

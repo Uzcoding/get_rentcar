@@ -1,3 +1,7 @@
+import 'package:flutter/material.dart';
+import 'package:get_rentcar/screens/screens.dart';
+import 'package:transition/transition.dart';
+
 abstract class Routes {
   static const String home = '/home';
   static const String authIntro = '/auth-intro';
@@ -10,4 +14,71 @@ abstract class Routes {
   static const String providers = '/providers';
   static const String cars = '/cars';
   static const String searchCarsResult = '/search-cars-result';
+  static const String carDetail = '/car-detail';
+
+  static generateRoute(settings) {
+    switch (settings.name) {
+      case Routes.authIntro:
+        return Transition(
+          child: AuthIntroScreen(),
+          transitionEffect: TransitionEffect.SCALE,
+          curve: Curves.linear,
+        );
+      case Routes.signUp:
+        return Transition(
+          child: SignUpScreen(),
+          transitionEffect: TransitionEffect.LEFT_TO_RIGHT,
+        );
+      case Routes.confirmation:
+        return Transition(
+          child: ConfirmationScreen(),
+          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        );
+      case Routes.home:
+        return Transition(
+          child: HomeScreen(),
+          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        );
+      case Routes.profileSettings:
+        return Transition(
+          child: ProfileSettingsScreen(),
+          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        );
+      case Routes.myReservations:
+        return Transition(
+          child: MyReservationsScreen(),
+          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        );
+      case Routes.myTransactions:
+        return Transition(
+          child: MyTransactionsScreen(),
+          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        );
+      case Routes.profile:
+        return Transition(
+          child: ProfileScreen(),
+          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        );
+      case Routes.providers:
+        return Transition(
+          child: ProvidersScreen(),
+          transitionEffect: TransitionEffect.FADE,
+        );
+      case Routes.cars:
+        return Transition(
+          child: CarsScreen(),
+          transitionEffect: TransitionEffect.FADE,
+        );
+      case Routes.searchCarsResult:
+        return Transition(
+          child: SearchCarResultScreen(),
+          transitionEffect: TransitionEffect.FADE,
+        );
+      case Routes.carDetail:
+        return Transition(
+          child: CarDetailScreen(),
+          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        );
+    }
+  }
 }
