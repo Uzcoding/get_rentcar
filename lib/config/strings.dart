@@ -67,4 +67,8 @@ abstract class AppStrings {
   static const String makingChanges = 'Внесения изменений';
   static const String coverageInCaseOfTheft = 'Покрытие на случай угона';
   static const String accidentCoverage = 'Покрытие на случай ДТП';
+
+  // Driver Detail
+  static const String driverDetail = 'Детали водителя';
+  static const String confirm = 'Подтвердить';
 }

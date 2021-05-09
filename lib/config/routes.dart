@@ -15,6 +15,7 @@ abstract class Routes {
   static const String cars = '/cars';
   static const String searchCarsResult = '/search-cars-result';
   static const String carDetail = '/car-detail';
+  static const String driverDetail = '/driver-detail';
 
   static generateRoute(settings) {
     switch (settings.name) {
@@ -78,6 +79,11 @@ abstract class Routes {
         return Transition(
           child: CarDetailScreen(),
           transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        );
+      case Routes.driverDetail:
+        return Transition(
+          child: DriverDetailsScreen(),
+          transitionEffect: TransitionEffect.SCALE,
         );
     }
   }

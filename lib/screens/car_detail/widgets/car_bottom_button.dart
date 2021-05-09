@@ -29,7 +29,7 @@ class CarBottomButton extends StatelessWidget {
           FilledButton(
             title: AppStrings.next,
             size: 130.0,
-            onPressed: () {},
+            onPressed: () => Navigator.pushNamed(context, Routes.driverDetail),
           ),
         ],
       ),
