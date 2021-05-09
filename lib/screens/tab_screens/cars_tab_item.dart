@@ -20,7 +20,7 @@ class CarsTabItem extends StatelessWidget {
                   style: TextStyles.listTitle,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () => Navigator.pushNamed(context, Routes.cars),
                   child: Text(
                     AppStrings.seeAll,
                     style: TextStyle(

@@ -16,4 +16,9 @@ abstract class IconsPath {
   static const String myTransactions = 'assets/icons/transaction.svg';
   static const String settings = 'assets/icons/settings.svg';
   static const String logout = 'assets/icons/logout.svg';
+
+  // Car
+  static const String armchair = 'assets/icons/armchair.svg';
+  static const String door = 'assets/icons/door.svg';
+  static const String conditsioner = 'assets/icons/conditsioner.svg';
 }

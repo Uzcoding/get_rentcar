@@ -45,6 +45,7 @@ abstract class AppStrings {
   static const String currency = 'Валюта';
   static const String accessNotification = 'Разрешить уведомления';
   static const String accessGeo = 'Включить местоположение';
+  static const String searchResult = 'Результаты поиска';
 
   // My Reservations
   static const String numberReservation = 'Номер бронирования';

@@ -3,9 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_rentcar/config/config.dart';
 import 'package:get_rentcar/widgets/widgets.dart';
 
-import 'widgets/all_providers_card.dart';
-
-class ProvidersScreen extends StatelessWidget {
+class CarsScreen extends StatelessWidget {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
@@ -25,7 +23,7 @@ class ProvidersScreen extends StatelessWidget {
             child: TextField(
               decoration: InputDecoration(
                 fillColor: Colors.white,
-                hintText: ' Avis',
+                hintText: 'Toyota Camri Y8',
                 suffixIcon: Padding(
                   padding: const EdgeInsets.only(right: 10.0),
                   child: SvgPicture.asset(
@@ -39,22 +37,20 @@ class ProvidersScreen extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(left: 25.0, bottom: 30.0),
             child: Text(
-              AppStrings.providers,
+              AppStrings.cars,
               style: TextStyles.listTitle,
             ),
           ),
           Expanded(
             child: ListView.separated(
               separatorBuilder: (context, index) =>
-                  const SizedBox(height: 10.0),
+                  const SizedBox(height: 20.0),
               physics: BouncingScrollPhysics(),
               padding: const EdgeInsets.symmetric(horizontal: 25.0)
                   .copyWith(bottom: 20.0),
               itemCount: 10,
               itemBuilder: (BuildContext context, int index) {
-                return AllProvidersCard(
-                  rate: 4,
-                );
+                return AllCarCard();
               },
             ),
           )

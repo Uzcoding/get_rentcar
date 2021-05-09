@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_rentcar/config/config.dart';
+import 'package:get_rentcar/widgets/widgets.dart';
 
 class AllProvidersCard extends StatelessWidget {
   const AllProvidersCard({
     Key? key,
+    required this.rate,
   }) : super(key: key);
+  final int rate;
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +34,7 @@ class AllProvidersCard extends StatelessWidget {
             children: <Widget>[
               Text(
                 'Avris',
-                style: const TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.bold,
-                  color: ColorPalette.drawerText,
-                ),
+                style: TextStyles.cardTitle,
               ),
               Text(
                 'Узбекистан - Ташкент',
@@ -45,35 +44,7 @@ class AllProvidersCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 5.0),
-              Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.star_rate_rounded,
-                    color: ColorPalette.mainColor,
-                    size: 17.0,
-                  ),
-                  Icon(
-                    Icons.star_rate_rounded,
-                    color: ColorPalette.mainColor,
-                    size: 17.0,
-                  ),
-                  Icon(
-                    Icons.star_rate_rounded,
-                    color: ColorPalette.mainColor,
-                    size: 17.0,
-                  ),
-                  Icon(
-                    Icons.star_rate_rounded,
-                    color: ColorPalette.mainColor,
-                    size: 17.0,
-                  ),
-                  Icon(
-                    Icons.star_border_rounded,
-                    color: ColorPalette.mainColor,
-                    size: 16.0,
-                  ),
-                ],
-              ),
+              generateStars(rate),
               const SizedBox(height: 17.0),
               Text(
                 '60 автомобилей',

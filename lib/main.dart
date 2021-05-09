@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.appTheme,
-      home: HomeScreen(),
+      home: SearchCarResultScreen(),
       initialRoute: '/',
       onGenerateRoute: (settings) {
         switch (settings.name) {
@@ -67,6 +67,16 @@ class MyApp extends StatelessWidget {
           case Routes.providers:
             return Transition(
               child: ProvidersScreen(),
+              transitionEffect: TransitionEffect.FADE,
+            );
+          case Routes.cars:
+            return Transition(
+              child: CarsScreen(),
+              transitionEffect: TransitionEffect.FADE,
+            );
+          case Routes.searchCarsResult:
+            return Transition(
+              child: SearchCarResultScreen(),
               transitionEffect: TransitionEffect.FADE,
             );
         }

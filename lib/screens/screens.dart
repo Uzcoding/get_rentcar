@@ -8,3 +8,5 @@ export 'my_reservations/my_reservations_screen.dart';
 export 'my_transactions/my_transactions_screen.dart';
 export 'profile/profile_screen.dart';
 export 'providers/providers_screen.dart';
+export 'cars/cars_screen.dart';
+export 'search_car_result/search_car_result_screen.dart';
