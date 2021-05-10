@@ -12,3 +12,4 @@ export 'cars/cars_screen.dart';
 export 'search_car_result/search_car_result_screen.dart';
 export 'car_detail/card_detail_screen.dart';
 export 'driver_details/driver_details_screen.dart';
+export 'payment_details/payment_details.dart';

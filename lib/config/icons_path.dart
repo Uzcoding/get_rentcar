@@ -8,6 +8,8 @@ abstract class IconsPath {
   static const String hertzBig = 'assets/icons/Hertz-big.svg';
   static const String star = 'assets/icons/star.svg';
   static const String activeStar = 'assets/icons/active-star.svg';
+  static const String visa = 'assets/icons/visa.svg';
+  static const String question = 'assets/icons/question.svg';
 
   // Drawer icons
   static const String profile = 'assets/icons/profile.svg';

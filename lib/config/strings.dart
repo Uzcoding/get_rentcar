@@ -71,4 +71,14 @@ abstract class AppStrings {
   // Driver Detail
   static const String driverDetail = 'Детали водителя';
   static const String confirm = 'Подтвердить';
+
+  // Payment Detail
+  static const String paymentDetail = 'Детали оплаты';
+  static const String enterCarDetail = 'Введите данные карты';
+  static const String cardOwner = 'Владелец карты';
+  static const String cardNumber = 'Номер карты';
+  static const String expirationDate = 'Срок окончания';
+  static const String cvv = 'CVV';
+  static const String saveCard =
+      'Сохранить эту карту для последующего\nиспользования?';
 }

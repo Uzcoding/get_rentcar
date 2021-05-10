@@ -8,15 +8,7 @@ class DriverDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: GestureDetector(
-          onTap: () => Navigator.pop(context),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 15.0),
-            child: Image.asset(ImagePath.arrow_back),
-          ),
-        ),
-      ),
+      appBar: appBarOnlyBack(context),
       body: ScrollConfiguration(
         behavior: CustomBehavior(),
         child: SingleChildScrollView(
@@ -58,7 +50,8 @@ class DriverDetailsScreen extends StatelessWidget {
                 FilledButton(
                   title: AppStrings.confirm,
                   size: double.infinity,
-                  onPressed: () {},
+                  onPressed: () =>
+                      Navigator.pushNamed(context, Routes.paymentDetail),
                 ),
                 const SizedBox(height: 50.0),
               ],

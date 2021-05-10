@@ -5,11 +5,13 @@ class DriverDetailInput extends StatelessWidget {
   final String title;
   final String hint;
   final TextInputType? type;
+  final Widget? suffix;
 
   const DriverDetailInput({
     Key? key,
     required this.title,
     required this.hint,
+    this.suffix,
     this.type,
   }) : super(key: key);
 
@@ -32,6 +34,7 @@ class DriverDetailInput extends StatelessWidget {
             cursorHeight: 20,
             cursorColor: Colors.black,
             decoration: InputDecoration(
+              suffixIcon: suffix ?? null,
               filled: false,
               contentPadding: EdgeInsets.zero,
               hintText: 'Введите $hint',
