@@ -18,6 +18,8 @@ abstract class Routes {
   static const String driverDetail = '/driver-detail';
   static const String paymentDetail = '/payment-detail';
   static const String bookingDetail = '/booking-detail';
+  static const String bookingSuccess = '/booking-success';
+  static const String bookingFail = '/booking-fail';
 
   static generateRoute(settings) {
     switch (settings.name) {
@@ -96,6 +98,16 @@ abstract class Routes {
         return Transition(
           child: BookingDetailsScreen(),
           transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        );
+      case Routes.bookingSuccess:
+        return Transition(
+          child: BookingSuccessScreen(),
+          transitionEffect: TransitionEffect.SCALE,
+        );
+      case Routes.bookingFail:
+        return Transition(
+          child: BookingFailScreen(),
+          transitionEffect: TransitionEffect.SCALE,
         );
     }
   }

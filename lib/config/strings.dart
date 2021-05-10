@@ -92,4 +92,11 @@ abstract class AppStrings {
   static const driverInfo = 'Сведения о водителе:';
   static const paymentDetails = 'Сведения об оплате:';
   static const pay = 'Оплатить';
+
+  // Booking Info
+  static const success = 'Ваша бронь подтверждена';
+  static const fail = 'Оплата не прошла';
+  static const retry = 'Попробуйте еще раз';
+  static const downloadVoucher = 'Скачать ваучер';
+  static const home = 'Главная';
 }

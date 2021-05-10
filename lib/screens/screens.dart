@@ -14,3 +14,5 @@ export 'car_detail/card_detail_screen.dart';
 export 'driver_details/driver_details_screen.dart';
 export 'payment_details/payment_details.dart';
 export 'booking_details/booking_details_screen.dart';
+export 'booking_info/booking_success_screen.dart';
+export 'booking_info/booking_fail_screen.dart';

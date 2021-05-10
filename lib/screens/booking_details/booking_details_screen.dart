@@ -74,7 +74,8 @@ class BookingDetailsScreen extends StatelessWidget {
                 FilledButton(
                   title: AppStrings.pay,
                   size: double.infinity,
-                  onPressed: () {},
+                  onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                      context, Routes.bookingSuccess, (route) => false),
                 ),
                 const SizedBox(height: 40.0),
               ],
