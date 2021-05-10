@@ -10,6 +10,7 @@ abstract class IconsPath {
   static const String activeStar = 'assets/icons/active-star.svg';
   static const String visa = 'assets/icons/visa.svg';
   static const String question = 'assets/icons/question.svg';
+  static const String arrowRight = 'assets/icons/arrow-right.svg';
 
   // Drawer icons
   static const String profile = 'assets/icons/profile.svg';

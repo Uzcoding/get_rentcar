@@ -75,7 +75,8 @@ class _PaymentDetailsScreenState extends State<PaymentDetailsScreen> {
                 FilledButton(
                   title: AppStrings.further,
                   size: double.infinity,
-                  onPressed: () {},
+                  onPressed: () =>
+                      Navigator.pushNamed(context, Routes.bookingDetail),
                 ),
                 const SizedBox(height: 50.0),
               ],

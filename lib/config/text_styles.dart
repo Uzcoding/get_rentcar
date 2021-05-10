@@ -36,4 +36,9 @@ abstract class TextStyles {
     fontSize: 12.0,
     color: ColorPalette.countryAndCity,
   );
+  static const TextStyle bookingTitle = const TextStyle(
+    color: ColorPalette.black,
+    fontSize: 16.0,
+    fontWeight: FontWeight.w600,
+  );
 }

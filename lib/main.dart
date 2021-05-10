@@ -10,10 +10,11 @@ void main() {
       statusBarColor: Colors.transparent,
     ),
   );
-  runApp(MyApp());
+  final app = App();
+  runApp(app);
 }
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

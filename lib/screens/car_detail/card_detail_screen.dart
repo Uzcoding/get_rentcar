@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get_rentcar/config/config.dart';
 import 'package:get_rentcar/screens/car_detail/widgets/widgets.dart';
 import 'package:get_rentcar/widgets/widgets.dart';

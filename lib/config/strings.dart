@@ -81,4 +81,15 @@ abstract class AppStrings {
   static const String cvv = 'CVV';
   static const String saveCard =
       'Сохранить эту карту для последующего\nиспользования?';
+
+  // Booking Detail
+  static const bookingDetail = 'Детали бронирования';
+  static const priceIncludes = 'Цена включает:';
+  static const deliveryCharge = 'Плата за доставку';
+  static const free = 'Бесплатно';
+  static const supplierLocation = 'Местоположение поставщика:';
+  static const workingTime = 'Время работы:';
+  static const driverInfo = 'Сведения о водителе:';
+  static const paymentDetails = 'Сведения об оплате:';
+  static const pay = 'Оплатить';
 }
