@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get_rentcar/config/config.dart';
 
-Row generateStars(int rate) {
+Row generateStars(int rate, {double? size, MainAxisAlignment? align}) {
   return Row(
+    mainAxisAlignment: align ?? MainAxisAlignment.start,
     children: [
       Row(
         children: List.generate(
@@ -11,7 +12,7 @@ Row generateStars(int rate) {
             return Icon(
               Icons.star_rate_rounded,
               color: ColorPalette.mainColor,
-              size: 17.0,
+              size: size ?? 17.0,
             );
           },
         ),
@@ -23,7 +24,7 @@ Row generateStars(int rate) {
                 (index) => Icon(
                   Icons.star_border_rounded,
                   color: ColorPalette.mainColor,
-                  size: 16.0,
+                  size: size ?? 16.0,
                 ),
               ),
             )

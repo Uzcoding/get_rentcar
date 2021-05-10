@@ -28,4 +28,9 @@ abstract class IconsPath {
   static const String bags = 'assets/icons/bags.svg';
   static const String stroller = 'assets/icons/stroller.svg';
   static const String checkMark = 'assets/icons/check-mark.svg';
+
+  // Provider Detail
+  static const String map = 'assets/icons/map.svg';
+  static const String message = 'assets/icons/comments.svg';
+  // static const String clock = 'assets/icons/clock.svg';
 }

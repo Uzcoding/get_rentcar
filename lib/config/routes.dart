@@ -20,6 +20,7 @@ abstract class Routes {
   static const String bookingDetail = '/booking-detail';
   static const String bookingSuccess = '/booking-success';
   static const String bookingFail = '/booking-fail';
+  static const String providerDetail = '/provider-detail';
 
   static generateRoute(settings) {
     switch (settings.name) {
@@ -108,6 +109,11 @@ abstract class Routes {
         return Transition(
           child: BookingFailScreen(),
           transitionEffect: TransitionEffect.SCALE,
+        );
+      case Routes.providerDetail:
+        return Transition(
+          child: ProviderDetailScreen(),
+          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
         );
     }
   }

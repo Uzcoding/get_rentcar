@@ -109,4 +109,7 @@ abstract class AppStrings {
   static const receiving = 'Получение';
   static const refund = 'Возврат';
   static const search = 'Поиск';
+  static const workingHour = 'Время работы';
+  static const location = 'Местоположение';
+  static const comments = 'Отзывы';
 }

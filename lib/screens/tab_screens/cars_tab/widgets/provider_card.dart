@@ -8,45 +8,48 @@ class HomeProviderCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 140.0,
-      padding: const EdgeInsets.all(15.0),
-      margin: index == 0
-          ? EdgeInsets.symmetric(horizontal: 13.0).copyWith(left: 0)
-          : EdgeInsets.symmetric(horizontal: 13.0),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: AppTheme.radius,
-        boxShadow: AppTheme.shadow,
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          SvgPicture.asset(IconsPath.hertz),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                'Hertz',
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w600,
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, Routes.providerDetail),
+      child: Container(
+        width: 140.0,
+        padding: const EdgeInsets.all(15.0),
+        margin: index == 0
+            ? EdgeInsets.symmetric(horizontal: 13.0).copyWith(left: 0)
+            : EdgeInsets.symmetric(horizontal: 13.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: AppTheme.radius,
+          boxShadow: AppTheme.shadow,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            SvgPicture.asset(IconsPath.hertz),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Hertz',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
-                overflow: TextOverflow.ellipsis,
-              ),
-              Text(
-                '60 автомобилей',
-                style: TextStyle(
-                  fontSize: 12.0,
-                  color: Color(0xFFA1A1A1),
+                Text(
+                  '60 автомобилей',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Color(0xFFA1A1A1),
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
-          )
-        ],
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
