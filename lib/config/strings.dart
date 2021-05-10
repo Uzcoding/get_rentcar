@@ -99,4 +99,14 @@ abstract class AppStrings {
   static const retry = 'Попробуйте еще раз';
   static const downloadVoucher = 'Скачать ваучер';
   static const home = 'Главная';
+
+  // Search Tab
+  static const vehicleSearch = 'Поиск автомобиля';
+  static const findBugdet = 'Найдите бюджетную аренду';
+  static const pickUpLocation = 'Место получения';
+  static const returnLoaction = 'Место возврата';
+  static const returnSameLocation = 'Возврат в том же месте';
+  static const receiving = 'Получение';
+  static const refund = 'Возврат';
+  static const search = 'Поиск';
 }

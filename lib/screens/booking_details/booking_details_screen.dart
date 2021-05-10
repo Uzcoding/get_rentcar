@@ -20,7 +20,11 @@ class BookingDetailsScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 25.0),
                   child: Text(
                     AppStrings.bookingDetail,
-                    style: TextStyles.profileTitle,
+                    style: const TextStyle(
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.bold,
+                      color: ColorPalette.drawerText,
+                    ),
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),

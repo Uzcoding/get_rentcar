@@ -20,9 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   final List<Widget> _tabsScreens = [
-    Container(
-      color: Colors.red,
-    ),
+    SearchTabScreen(),
     CarsTabItem(),
     Container(
       color: Colors.blue,

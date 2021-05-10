@@ -6,4 +6,5 @@ abstract class ImagePath {
   static const dreamCar = 'assets/images/dream-car.png';
   static const bigCar = 'assets/images/big-car.png';
   static const checkBig = 'assets/images/check-big.png';
+  static const arrowDown = 'assets/images/arrow-down.png';
 }

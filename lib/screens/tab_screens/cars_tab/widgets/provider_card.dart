@@ -2,23 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_rentcar/config/config.dart';
 
-class ProvidersList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 140.0,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        physics: BouncingScrollPhysics(),
-        itemCount: 5,
-        itemBuilder: (BuildContext context, int index) {
-          return HomeProviderCard(index: index);
-        },
-      ),
-    );
-  }
-}
-
 class HomeProviderCard extends StatelessWidget {
   const HomeProviderCard({required this.index});
   final int index;

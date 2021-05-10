@@ -41,4 +41,18 @@ abstract class TextStyles {
     fontSize: 16.0,
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle searchTitle = const TextStyle(
+    color: ColorPalette.authGrey,
+    fontSize: 13.0,
+  );
+  static const TextStyle searchDayNum = const TextStyle(
+    color: ColorPalette.mainColor,
+    fontWeight: FontWeight.w500,
+    fontSize: 52.0,
+  );
+  static const TextStyle searchDayAndMonth = const TextStyle(
+    color: ColorPalette.mainColor,
+    fontWeight: FontWeight.w500,
+    fontSize: 17.0,
+  );
 }

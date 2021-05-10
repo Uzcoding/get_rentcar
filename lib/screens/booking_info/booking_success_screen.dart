@@ -28,6 +28,7 @@ class BookingSuccessScreen extends StatelessWidget {
                   child: Text(
                     AppStrings.success,
                     style: TextStyles.listTitle,
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 Spacer(),

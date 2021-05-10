@@ -20,6 +20,7 @@ class PaymentRowInputs extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 17.0,
                 ),
+                overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: 15.0),
               SizedBox(
@@ -31,7 +32,7 @@ class PaymentRowInputs extends StatelessWidget {
                   decoration: InputDecoration(
                     filled: false,
                     contentPadding: EdgeInsets.zero,
-                    hintText: 'Введите cрок окончания',
+                    hintText: 'Cрок окончания',
                   ),
                   style: TextStyle(
                     color: ColorPalette.profileText,
@@ -74,7 +75,7 @@ class PaymentRowInputs extends StatelessWidget {
                     ),
                     filled: false,
                     contentPadding: EdgeInsets.zero,
-                    hintText: 'Введите секретный код',
+                    hintText: 'CVV код',
                   ),
                   style: TextStyle(
                     color: ColorPalette.profileText,

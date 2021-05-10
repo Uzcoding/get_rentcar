@@ -40,6 +40,7 @@ class TransactionsTopContent extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(width: 10.0),
               Flexible(
                 child: Text(
                   '10 000 000 сум',
@@ -48,7 +49,7 @@ class TransactionsTopContent extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: ColorPalette.mainColor,
                   ),
-                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.end,
                 ),
               ),
             ],
