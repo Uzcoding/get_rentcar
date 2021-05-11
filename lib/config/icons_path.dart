@@ -32,5 +32,5 @@ abstract class IconsPath {
   // Provider Detail
   static const String map = 'assets/icons/map.svg';
   static const String message = 'assets/icons/comments.svg';
-  // static const String clock = 'assets/icons/clock.svg';
+  static const String clock = 'assets/icons/clock.svg';
 }

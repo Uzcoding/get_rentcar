@@ -51,7 +51,7 @@ class LocationBlock extends StatelessWidget {
             Container(
               width: 142.0,
               height: 132.0,
-              color: Colors.red,
+              child: Image.asset(ImagePath.map),
             )
           ],
         ),

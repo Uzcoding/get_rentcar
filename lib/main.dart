@@ -19,7 +19,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.appTheme,
-      home: HomeScreen(),
+      home: AuthIntroScreen(),
       initialRoute: '/',
       onGenerateRoute: (settings) => Routes.generateRoute(settings),
     );

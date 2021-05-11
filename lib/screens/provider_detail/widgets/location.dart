@@ -28,14 +28,7 @@ class Location extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20.0),
-        Container(
-          width: 175.0,
-          height: 175.0,
-          decoration: BoxDecoration(
-            color: Colors.grey,
-            borderRadius: AppTheme.radius,
-          ),
-        ),
+        Image.asset(ImagePath.map),
         const SizedBox(height: 40.0),
       ],
     );

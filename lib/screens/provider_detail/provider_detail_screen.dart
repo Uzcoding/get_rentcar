@@ -12,7 +12,7 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
   final List<String> icons = [
     IconsPath.map,
     IconsPath.message,
-    IconsPath.map,
+    IconsPath.clock,
   ];
   final List<Widget> blocks = [
     Location(),
