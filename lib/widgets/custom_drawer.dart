@@ -18,26 +18,21 @@ class _CustomDrawerState extends State<CustomDrawer> {
       'route': Routes.profile,
     },
     1: {
-      'icon': IconsPath.bron,
-      'name': AppStrings.bron,
-      'route': '',
-    },
-    2: {
       'icon': IconsPath.myReservations,
       'name': AppStrings.myReservations,
       'route': Routes.myReservations,
     },
-    3: {
+    2: {
       'icon': IconsPath.myTransactions,
       'name': AppStrings.myTransactions,
       'route': Routes.myTransactions,
     },
-    4: {
+    3: {
       'icon': IconsPath.settings,
       'name': AppStrings.settings,
       'route': Routes.profileSettings,
     },
-    5: {
+    4: {
       'icon': IconsPath.logout,
       'name': AppStrings.logout,
       'route': '',
@@ -61,7 +56,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 physics: BouncingScrollPhysics(),
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(25.0),
+                    padding: const EdgeInsets.all(25.0).copyWith(right: 5.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -74,17 +69,48 @@ class _CustomDrawerState extends State<CustomDrawer> {
                           ),
                         ),
                         const SizedBox(height: 20.0),
-                        Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.grey.shade300,
-                              width: 8.0,
+                        Row(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey.shade300,
+                                  width: 8.0,
+                                ),
+                                shape: BoxShape.circle,
+                              ),
+                              child: CircleAvatar(
+                                radius: 32.0,
+                                backgroundImage: AssetImage(ImagePath.user),
+                              ),
                             ),
-                            shape: BoxShape.circle,
-                          ),
-                          child: CircleAvatar(
-                            radius: 40.0,
-                          ),
+                            const SizedBox(width: 10.0),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: size.width * .5,
+                                  child: Text(
+                                    'Дмитрий Пономарев',
+                                    style: const TextStyle(
+                                      color: ColorPalette.drawerText,
+                                      fontSize: 15.0,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                                const SizedBox(height: 10.0),
+                                Text(
+                                  'ID: 425',
+                                  style: const TextStyle(
+                                    color: ColorPalette.drawerText,
+                                    fontSize: 13.0,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -132,7 +158,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             ),
             Padding(
               padding:
-                  const EdgeInsets.only(left: 30.0, bottom: 50.0, top: 10.0),
+                  const EdgeInsets.only(left: 30.0, bottom: 25.0, top: 10.0),
               child: Text(
                 AppStrings.support,
                 style: TextStyle(

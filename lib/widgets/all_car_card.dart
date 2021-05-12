@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_rentcar/config/config.dart';
 import 'package:get_rentcar/screens/cars/widgets/widgets.dart';
-import 'package:get_rentcar/widgets/widgets.dart';
 
 class AllCarCard extends StatelessWidget {
   const AllCarCard({
@@ -13,6 +12,7 @@ class AllCarCard extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.pushNamed(context, Routes.carDetail),
       child: Container(
+        margin: const EdgeInsets.only(bottom: 20.0),
         padding: const EdgeInsets.all(15.0),
         decoration: BoxDecoration(
           borderRadius: AppTheme.radius,
@@ -21,8 +21,35 @@ class AllCarCard extends StatelessWidget {
         ),
         child: Row(
           children: <Widget>[
-            Image.asset(
-              ImagePath.car,
+            Column(
+              children: [
+                Image.asset(
+                  ImagePath.car,
+                ),
+                const SizedBox(height: 10.0),
+                SizedBox(
+                  width: 120.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      carInsideInfo(
+                        count: 5,
+                        icon: IconsPath.armchair,
+                        iconSize: 18.0,
+                      ),
+                      carInsideInfo(
+                        count: 5,
+                        icon: IconsPath.door,
+                        iconSize: 18.0,
+                      ),
+                      carInsideInfo(
+                        icon: IconsPath.conditsioner,
+                        iconSize: 18.0,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
             const SizedBox(width: 10.0),
             Expanded(
@@ -30,13 +57,13 @@ class AllCarCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Flexible(
                         child: Text(
                           'Toyota Camri Y8',
                           style: TextStyles.cardTitle,
-                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       const SizedBox(width: 5.0),
@@ -46,30 +73,25 @@ class AllCarCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  generateStars(4),
-                  SizedBox(
-                    width: 120.0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        carInsideInfo(
-                          count: 5,
-                          icon: IconsPath.armchair,
-                          iconSize: 18.0,
-                        ),
-                        carInsideInfo(
-                          count: 5,
-                          icon: IconsPath.door,
-                          iconSize: 18.0,
-                        ),
-                        carInsideInfo(
-                          icon: IconsPath.conditsioner,
-                          iconSize: 18.0,
-                        ),
+                  const SizedBox(height: 10.0),
+                  RichText(
+                    overflow: TextOverflow.ellipsis,
+                    text: TextSpan(
+                      style: const TextStyle(
+                        color: ColorPalette.mainColor,
+                        fontSize: 14.0,
+                      ),
+                      children: [
+                        TextSpan(text: '450 000 сум'),
+                        TextSpan(
+                            text: ' / 1 день',
+                            style: const TextStyle(
+                              color: ColorPalette.black,
+                            )),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20.0),
+                  const SizedBox(height: 10.0),
                   buildCharacteristic(
                     info: 'Стаж вождения от:',
                     value: ' 3 лет',
@@ -81,16 +103,6 @@ class AllCarCard extends StatelessWidget {
                   buildCharacteristic(
                     info: 'Возраст от:',
                     value: '21 года',
-                  ),
-                  const SizedBox(height: 12.0),
-                  Text(
-                    'Цена за день: 450 000',
-                    style: const TextStyle(
-                      color: ColorPalette.mainColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14.0,
-                    ),
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ],
               ),

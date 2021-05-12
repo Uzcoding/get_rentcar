@@ -10,29 +10,32 @@ class ClockBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          AppStrings.workingHour,
-          style: const TextStyle(
-            color: ColorPalette.black,
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+      child: Column(
+        children: [
+          Text(
+            AppStrings.workingHour,
+            style: const TextStyle(
+              color: ColorPalette.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        const SizedBox(height: 50.0),
-        WorkingTimeInfo(
-          start: 'Понедельник',
-          end: 'Пятница',
-          hour: 24,
-        ),
-        const SizedBox(height: 30.0),
-        WorkingTimeInfo(
-          start: 'Суббота',
-          end: 'Воскресенье',
-          hour: 24,
-        ),
-      ],
+          const SizedBox(height: 50.0),
+          WorkingTimeInfo(
+            start: 'Понедельник',
+            end: 'Пятница',
+            hour: 24,
+          ),
+          const SizedBox(height: 30.0),
+          WorkingTimeInfo(
+            start: 'Суббота',
+            end: 'Воскресенье',
+            hour: 24,
+          ),
+        ],
+      ),
     );
   }
 }

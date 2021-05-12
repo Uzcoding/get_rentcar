@@ -17,4 +17,5 @@ export 'booking_details/booking_details_screen.dart';
 export 'booking_info/booking_success_screen.dart';
 export 'booking_info/booking_fail_screen.dart';
 export 'tab_screens/search_tab/search_tab_screen.dart';
+export 'tab_screens/all_cars_tab/all_cars_tab.dart';
 export 'provider_detail/provider_detail_screen.dart';

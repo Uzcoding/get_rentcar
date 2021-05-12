@@ -33,7 +33,8 @@ abstract class Routes {
       case Routes.signUp:
         return Transition(
           child: SignUpScreen(),
-          transitionEffect: TransitionEffect.LEFT_TO_RIGHT,
+          transitionEffect: TransitionEffect.FADE,
+          curve: Curves.linear,
         );
       case Routes.confirmation:
         return Transition(

@@ -15,6 +15,7 @@ class AllProvidersCard extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.pushNamed(context, Routes.providerDetail),
       child: Container(
+        margin: const EdgeInsets.only(bottom: 10.0),
         padding: const EdgeInsets.all(20.0),
         decoration: BoxDecoration(
           borderRadius: AppTheme.radius,

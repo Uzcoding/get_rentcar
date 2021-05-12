@@ -8,4 +8,5 @@ abstract class ImagePath {
   static const checkBig = 'assets/images/check-big.png';
   static const arrowDown = 'assets/images/arrow-down.png';
   static const map = 'assets/images/map.png';
+  static const user = 'assets/images/user.png';
 }

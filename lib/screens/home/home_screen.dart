@@ -22,9 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _tabsScreens = [
     SearchTabScreen(),
     CarsTabItem(),
-    Container(
-      color: Colors.blue,
-    ),
+    AllCarsTab(),
   ];
 
   @override

@@ -15,51 +15,54 @@ class TransactionInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Container(
-          width: 90.0,
-          height: 60.0,
-          decoration: BoxDecoration(
-            color: ColorPalette.tranactionsCarBg,
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-          child: Center(
-            child: SvgPicture.asset(
-              IconsPath.tabCar,
-              color: ColorPalette.mainColor,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 15.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            width: 90.0,
+            height: 60.0,
+            decoration: BoxDecoration(
+              color: ColorPalette.tranactionsCarBg,
+              borderRadius: BorderRadius.circular(15.0),
             ),
-          ),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              'ID $id',
-              style: TextStyles.transictionsContent,
-            ),
-            Text(
-              date,
-              style: TextStyle(
-                color: ColorPalette.settingsGray,
-                fontSize: 13.0,
+            child: Center(
+              child: SvgPicture.asset(
+                IconsPath.tabCar,
+                color: ColorPalette.mainColor,
               ),
             ),
-          ],
-        ),
-        Flexible(
-          child: Text(
-            '- $price сум',
-            style: TextStyle(
-              color: ColorPalette.red,
-              fontSize: 22.0,
-              fontWeight: FontWeight.w600,
-            ),
-            overflow: TextOverflow.ellipsis,
           ),
-        ),
-      ],
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                'ID $id',
+                style: TextStyles.transictionsContent,
+              ),
+              Text(
+                date,
+                style: TextStyle(
+                  color: ColorPalette.settingsGray,
+                  fontSize: 13.0,
+                ),
+              ),
+            ],
+          ),
+          Flexible(
+            child: Text(
+              '- $price сум',
+              style: TextStyle(
+                color: ColorPalette.red,
+                fontSize: 22.0,
+                fontWeight: FontWeight.w600,
+              ),
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

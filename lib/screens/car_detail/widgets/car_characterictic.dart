@@ -34,7 +34,7 @@ class CarCharacteristic extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
         horizontal: 30.0,
         vertical: 20.0,
-      ).copyWith(top: 60.0),
+      ).copyWith(top: 30.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: List.generate(

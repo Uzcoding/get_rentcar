@@ -11,50 +11,51 @@ class CarsScreen extends StatelessWidget {
       key: _scaffoldKey,
       appBar: getAppBarWithDrawer(_scaffoldKey),
       drawer: CustomDrawer(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            height: 47.0,
-            margin: const EdgeInsets.symmetric(
-              horizontal: 25.0,
-              vertical: 30.0,
-            ),
-            child: TextField(
-              decoration: InputDecoration(
-                fillColor: Colors.white,
-                hintText: 'Toyota Camri Y8',
-                suffixIcon: Padding(
-                  padding: const EdgeInsets.only(right: 10.0),
-                  child: SvgPicture.asset(
-                    IconsPath.search,
-                    fit: BoxFit.scaleDown,
+      body: ScrollConfiguration(
+        behavior: CustomBehavior(),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                height: 47.0,
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 25.0,
+                  vertical: 30.0,
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    fillColor: Colors.white,
+                    hintText: 'Toyota Camri Y8',
+                    suffixIcon: Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: SvgPicture.asset(
+                        IconsPath.search,
+                        fit: BoxFit.scaleDown,
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
+              Container(
+                margin: const EdgeInsets.only(left: 25.0, bottom: 30.0),
+                child: Text(
+                  AppStrings.cars,
+                  style: TextStyles.listTitle,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Column(
+                  children: List.generate(
+                    10,
+                    (index) => AllCarCard(),
+                  ),
+                ),
+              ),
+            ],
           ),
-          Container(
-            margin: const EdgeInsets.only(left: 25.0, bottom: 30.0),
-            child: Text(
-              AppStrings.cars,
-              style: TextStyles.listTitle,
-            ),
-          ),
-          Expanded(
-            child: ListView.separated(
-              separatorBuilder: (context, index) =>
-                  const SizedBox(height: 20.0),
-              physics: BouncingScrollPhysics(),
-              padding: const EdgeInsets.symmetric(horizontal: 25.0)
-                  .copyWith(bottom: 20.0),
-              itemCount: 10,
-              itemBuilder: (BuildContext context, int index) {
-                return AllCarCard();
-              },
-            ),
-          )
-        ],
+        ),
       ),
     );
   }

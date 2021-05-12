@@ -2,14 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get_rentcar/config/config.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
-class SignUpScreen extends StatefulWidget {
-  @override
-  _SignUpScreenState createState() => _SignUpScreenState();
-}
-
-class _SignUpScreenState extends State<SignUpScreen> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final TextEditingController controller = TextEditingController();
+class SignUpScreen extends StatelessWidget {
+  // final TextEditingController controller = TextEditingController();
 
   Container getIntlPhoneFormField() {
     return Container(
@@ -74,7 +68,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
-  Center getNextButton() {
+  Center getNextButton(BuildContext context) {
     return Center(
       child: TextButton(
         onPressed: () {
@@ -95,14 +89,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          margin:
-              const EdgeInsets.symmetric(horizontal: 22.0).copyWith(top: 100.0),
-          child: SafeArea(
-            child: Form(
-              key: _formKey,
+    return Theme(
+      data: ThemeData(brightness: Brightness.light),
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 22.0)
+                .copyWith(top: 100.0),
+            child: SafeArea(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -120,7 +114,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   const SizedBox(height: 20.0),
                   getIntlPhoneFormField(),
                   getUserAgreement(),
-                  getNextButton()
+                  getNextButton(context)
                 ],
               ),
             ),

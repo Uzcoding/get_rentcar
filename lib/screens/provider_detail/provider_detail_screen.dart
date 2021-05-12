@@ -28,14 +28,14 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
       body: ScrollConfiguration(
         behavior: CustomBehavior(),
         child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
-            child: Column(
-              children: <Widget>[
-                const SizedBox(height: 40.0),
-                ProviderDetailBrand(),
-                const SizedBox(height: 30.0),
-                Row(
+          child: Column(
+            children: <Widget>[
+              const SizedBox(height: 40.0),
+              ProviderDetailBrand(),
+              const SizedBox(height: 30.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: List.generate(
                     icons.length,
@@ -51,10 +51,10 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 30.0),
-                blocks[_currentIndex],
-              ],
-            ),
+              ),
+              const SizedBox(height: 30.0),
+              blocks[_currentIndex],
+            ],
           ),
         ),
       ),

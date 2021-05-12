@@ -25,103 +25,81 @@ class _CarDetailScreenState extends State<CarDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: getAppBarWithBackAndTitle(context, 'Toyota Camri Y8'),
       body: ScrollConfiguration(
         behavior: CustomBehavior(),
-        child: Stack(
-          children: [
-            Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 170.0,
-                  child: PageView.builder(
-                    controller: pageController,
-                    onPageChanged: (value) {
-                      _currentPage = value;
-                      setState(() {});
-                    },
-                    itemCount: 4,
-                    itemBuilder: (context, index) {
-                      return Image.asset(ImagePath.bigCar);
-                    },
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 170.0,
+                child: PageView.builder(
+                  controller: pageController,
+                  onPageChanged: (value) {
+                    _currentPage = value;
+                    setState(() {});
+                  },
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return Image.asset(ImagePath.bigCar);
+                  },
+                ),
+              ),
+              buildDots(),
+              CarProvider(),
+              CarInfoDetails(),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(15.0),
+                    topRight: Radius.circular(15.0),
                   ),
                 ),
-                buildDots(),
-                CarProvider(),
-                CarInfoDetails(),
-              ],
-            ),
-            DraggableScrollableSheet(
-              initialChildSize: 0.3,
-              minChildSize: 0.3,
-              maxChildSize: 0.9,
-              builder: (context, scrollController) {
-                return Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15.0),
-                      topRight: Radius.circular(15.0),
-                    ),
-                  ),
-                  child: Stack(
-                    children: [
-                      Container(
-                        width: double.infinity,
-                        child: SingleChildScrollView(
-                          controller: scrollController,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              CarCharacteristic(),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 30.0,
-                                ).copyWith(bottom: 20.0),
-                                child: Text(
-                                  AppStrings.addons,
-                                  style: TextStyles.listTitle,
-                                ),
-                              ),
-                              CarAddons(),
-                              const SizedBox(height: 70.0),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 30.0,
-                                ).copyWith(bottom: 29.0),
-                                child: Text(
-                                  AppStrings.included,
-                                  style: TextStyles.listTitle,
-                                ),
-                              ),
-                              CarIncludes(),
-                              const SizedBox(height: 50.0),
-                              CarBottomButton(),
-                            ],
-                          ),
+                child: Container(
+                  width: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Center(
+                        child: Container(
+                          margin: const EdgeInsets.only(top: 30.0),
+                          width: 100.0,
+                          height: 2.0,
+                          color: Colors.grey[300],
                         ),
                       ),
-                      Positioned(
-                        top: 30,
-                        child: Container(
-                          width: size.width,
-                          child: Center(
-                            child: Container(
-                              width: 100.0,
-                              height: 2.0,
-                              color: Colors.grey[300],
-                            ),
-                          ),
+                      CarCharacteristic(),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 30.0,
+                        ).copyWith(bottom: 20.0),
+                        child: Text(
+                          AppStrings.addons,
+                          style: TextStyles.listTitle,
                         ),
-                      )
+                      ),
+                      CarAddons(),
+                      const SizedBox(height: 70.0),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 30.0,
+                        ).copyWith(bottom: 29.0),
+                        child: Text(
+                          AppStrings.included,
+                          style: TextStyles.listTitle,
+                        ),
+                      ),
+                      CarIncludes(),
+                      const SizedBox(height: 50.0),
+                      CarBottomButton(),
                     ],
                   ),
-                );
-              },
-            ),
-          ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

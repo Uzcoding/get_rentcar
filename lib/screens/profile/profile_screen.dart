@@ -46,8 +46,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                           shape: BoxShape.circle,
                         ),
-                        child: CircleAvatar(
-                          radius: 50.0,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: ColorPalette.mainColor,
+                              width: 2.0,
+                            ),
+                            shape: BoxShape.circle,
+                          ),
+                          child: CircleAvatar(
+                            backgroundImage: AssetImage(ImagePath.user),
+                            radius: 50.0,
+                          ),
                         ),
                       ),
                       Positioned(
