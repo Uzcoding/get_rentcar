@@ -11,14 +11,12 @@ class ProfileSettingsScreen extends StatefulWidget {
 }
 
 class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
   bool notificationEnabled = false;
   bool geoEnabled = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
-      appBar: getAppBarWithDrawer(_scaffoldKey),
+      appBar: appBarOnlyBack(context),
       body: ScrollConfiguration(
         behavior: CustomBehavior(),
         child: SingleChildScrollView(

@@ -3,12 +3,10 @@ import 'package:get_rentcar/config/config.dart';
 import 'package:get_rentcar/widgets/widgets.dart';
 
 class MyReservationsScreen extends StatelessWidget {
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
-      appBar: getAppBarWithDrawer(_scaffoldKey),
+      appBar: appBarOnlyBack(context),
       body: ScrollConfiguration(
         behavior: CustomBehavior(),
         child: SingleChildScrollView(

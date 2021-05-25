@@ -1,6 +1,8 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_rentcar/config/config.dart';
+import 'package:get_rentcar/screens/provider_detail/provider_detail_screen.dart';
 
 class HomeProviderCard extends StatelessWidget {
   const HomeProviderCard({required this.index});
@@ -8,9 +10,12 @@ class HomeProviderCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, Routes.providerDetail),
-      child: Container(
+    return OpenContainer(
+      transitionDuration: Duration(milliseconds: 700),
+      closedElevation: 0,
+      openElevation: 0,
+      closedColor: Colors.transparent,
+      closedBuilder: (context, action) => Container(
         width: 140.0,
         padding: const EdgeInsets.all(15.0),
         margin: index == 0
@@ -51,6 +56,7 @@ class HomeProviderCard extends StatelessWidget {
           ],
         ),
       ),
+      openBuilder: (context, action) => ProviderDetailScreen(),
     );
   }
 }

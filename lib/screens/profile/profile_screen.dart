@@ -14,7 +14,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: getAppBarWithDrawer(_scaffoldKey),
+      appBar: appBarOnlyBack(context),
       drawer: CustomDrawer(),
       body: ScrollConfiguration(
         behavior: CustomBehavior(),

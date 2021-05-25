@@ -7,13 +7,10 @@ import 'package:get_rentcar/widgets/widgets.dart';
 import 'widgets/widgets.dart';
 
 class MyTransactionsScreen extends StatelessWidget {
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    double sizeH = MediaQuery.of(context).size.height;
     return Scaffold(
-      key: _scaffoldKey,
-      appBar: getAppBarWithDrawer(_scaffoldKey),
+      appBar: appBarOnlyBack(context),
       drawer: CustomDrawer(),
       body: ScrollConfiguration(
         behavior: CustomBehavior(),

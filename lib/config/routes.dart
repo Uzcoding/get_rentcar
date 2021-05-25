@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:get_rentcar/config/page_routes.dart';
 import 'package:get_rentcar/screens/screens.dart';
-import 'package:transition/transition.dart';
 
 abstract class Routes {
   static const String home = '/home';
@@ -25,96 +24,76 @@ abstract class Routes {
   static generateRoute(settings) {
     switch (settings.name) {
       case Routes.authIntro:
-        return Transition(
-          child: AuthIntroScreen(),
-          transitionEffect: TransitionEffect.SCALE,
-          curve: Curves.linear,
+        return PageRoutes.fadeThrough(
+          () => AuthIntroScreen(),
         );
       case Routes.signUp:
-        return Transition(
-          child: SignUpScreen(),
-          transitionEffect: TransitionEffect.FADE,
-          curve: Curves.linear,
+        return PageRoutes.fadeThrough(
+          () => SignUpScreen(),
         );
       case Routes.confirmation:
-        return Transition(
-          child: ConfirmationScreen(),
-          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        return PageRoutes.sharedAxis(
+          () => ConfirmationScreen(),
         );
       case Routes.home:
-        return Transition(
-          child: HomeScreen(),
-          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        return PageRoutes.sharedAxis(
+          () => HomeScreen(),
         );
       case Routes.profileSettings:
-        return Transition(
-          child: ProfileSettingsScreen(),
-          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        return PageRoutes.sharedAxis(
+          () => ProfileSettingsScreen(),
         );
       case Routes.myReservations:
-        return Transition(
-          child: MyReservationsScreen(),
-          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        return PageRoutes.sharedAxis(
+          () => MyReservationsScreen(),
         );
       case Routes.myTransactions:
-        return Transition(
-          child: MyTransactionsScreen(),
-          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        return PageRoutes.sharedAxis(
+          () => MyTransactionsScreen(),
         );
       case Routes.profile:
-        return Transition(
-          child: ProfileScreen(),
-          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        return PageRoutes.sharedAxis(
+          () => ProfileScreen(),
         );
       case Routes.providers:
-        return Transition(
-          child: ProvidersScreen(),
-          transitionEffect: TransitionEffect.FADE,
+        return PageRoutes.fadeThrough(
+          () => ProvidersScreen(),
         );
       case Routes.cars:
-        return Transition(
-          child: CarsScreen(),
-          transitionEffect: TransitionEffect.FADE,
+        return PageRoutes.fadeThrough(
+          () => CarsScreen(),
         );
       case Routes.searchCarsResult:
-        return Transition(
-          child: SearchCarResultScreen(),
-          transitionEffect: TransitionEffect.FADE,
+        return PageRoutes.fadeThrough(
+          () => SearchCarResultScreen(),
         );
       case Routes.carDetail:
-        return Transition(
-          child: CarDetailScreen(),
-          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        return PageRoutes.sharedAxis(
+          () => CarDetailScreen(),
         );
       case Routes.driverDetail:
-        return Transition(
-          child: DriverDetailsScreen(),
-          transitionEffect: TransitionEffect.SCALE,
+        return PageRoutes.fadeScale(
+          () => DriverDetailsScreen(),
         );
       case Routes.paymentDetail:
-        return Transition(
-          child: PaymentDetailsScreen(),
-          transitionEffect: TransitionEffect.SCALE,
+        return PageRoutes.fadeScale(
+          () => PaymentDetailsScreen(),
         );
       case Routes.bookingDetail:
-        return Transition(
-          child: BookingDetailsScreen(),
-          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        return PageRoutes.fadeScale(
+          () => BookingDetailsScreen(),
         );
       case Routes.bookingSuccess:
-        return Transition(
-          child: BookingSuccessScreen(),
-          transitionEffect: TransitionEffect.SCALE,
+        return PageRoutes.fadeScale(
+          () => BookingSuccessScreen(),
         );
       case Routes.bookingFail:
-        return Transition(
-          child: BookingFailScreen(),
-          transitionEffect: TransitionEffect.SCALE,
+        return PageRoutes.fadeScale(
+          () => BookingFailScreen(),
         );
       case Routes.providerDetail:
-        return Transition(
-          child: ProviderDetailScreen(),
-          transitionEffect: TransitionEffect.RIGHT_TO_LEFT,
+        return PageRoutes.fadeThrough(
+          () => ProviderDetailScreen(),
         );
     }
   }

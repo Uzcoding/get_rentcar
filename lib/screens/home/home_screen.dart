@@ -27,12 +27,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var paddingBottom = MediaQuery.of(context).viewInsets.bottom;
     return Scaffold(
       key: _scaffoldKey,
       appBar: getAppBarWithDrawer(_scaffoldKey),
       body: _tabsScreens[currentTabIndex],
       bottomNavigationBar: SizedBox(
-        height: 70.0,
+        height: 92.0,
         child: BottomNavigationBar(
           elevation: 20.0,
           showSelectedLabels: false,

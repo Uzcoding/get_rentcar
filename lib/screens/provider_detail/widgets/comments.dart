@@ -14,7 +14,7 @@ class _CommentsState extends State<Comments> {
   final PageController pageController = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
-    double size = MediaQuery.of(context).size.height;
+    double size = MediaQuery.of(context).size.width;
     return Column(
       children: [
         Text(
@@ -30,9 +30,10 @@ class _CommentsState extends State<Comments> {
           children: [
             Center(
               child: SizedBox(
-                width: size / 2.3,
+                width: size / 1.4,
                 height: 270.0,
                 child: PageView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   controller: pageController,
                   scrollDirection: Axis.horizontal,
                   itemCount: 3,
